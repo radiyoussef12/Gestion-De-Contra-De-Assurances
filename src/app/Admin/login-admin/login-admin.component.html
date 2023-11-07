@@ -1,0 +1,42 @@
+
+<body id="particles-js" >
+</body>
+<div>
+<div class="animated bounceInDown" >
+  <div class="container">
+    <span class="error animated tada" id="msg"></span>
+    <form name="form1" class="box" [formGroup]="loginFormA" (ngSubmit)="submitA()">
+      <h4>Admin <span> Login</span></h4>
+      <h5 style="margin-top: 20px;">Sign in to your account.</h5>
+
+
+        <input  matInput type="text" name="email" placeholder="Email" autocomplete="off" formControlName="email" required email style="margin: 20px; padding-top: 20px; background-color: #363636;">
+        <mat-error *ngIf="email?.errors?.['email']">
+          Please enter a valid email address
+        </mat-error>
+
+        
+
+        <i class="typcn typcn-eye" id="eye"></i>
+        <input matInput type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off"formControlName="password" required minlength="8" style="margin: 20px;padding-top: 20px; background-color: #363636;">
+        <mat-error *ngIf="password?.errors?.['required']">
+          Password is required
+        </mat-error>
+     
+        <!-- <a  class="forgetpass">Forget Password?</a> -->
+        <button mat-button color="primary" [disabled]="!loginFormA.get('email')!.valid"
+        (click)="recoverPassword()"
+        test-id="recover-password-button">
+        Recover password
+    </button>
+        <button type="submit"  class="btn1">Login</button>
+      </form>
+        <a  routerLinkActive="list-item-active" routerLink="/admin/branch" class="dnthave">Don’t have an account? Sign up</a>
+  </div> 
+       <div class="footer">
+
+    </div>
+</div>
+
+
+    

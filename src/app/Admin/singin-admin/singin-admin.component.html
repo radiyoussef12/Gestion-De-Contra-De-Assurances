@@ -1,0 +1,46 @@
+
+
+<body id="particles-js"></body>
+<div class="animated bounceInDown">
+  <div class="container">
+    <span class="error animated tada" id="msg"></span>
+    <form name="form1" class="box"  style="margin-top: -10px;" [formGroup]="signUpFormAdmin" (ngSubmit)="submitA()">
+      <h4><span style="margin-left: 9px;">Create Account</span></h4>
+    
+      <h3 style="margin-top: 10px;">Sign in to your account.</h3>
+      <input  matInput type="text" name="name" placeholder=" name" autocomplete="off"  formControlName="name">
+      <input  matInput type="text" name="last" placeholder=" last name" autocomplete="off"  formControlName="last">
+       <!-- <mat-error *ngIf="name?.errors?.['required']">
+      entre votre prenome 
+      </mat-error> -->
+      <i class="typcn typcn-eye" id="eye"></i>
+        <input  matInput type="text" name="email" placeholder=" Email Addresz" autocomplete="off"  formControlName="email">
+       
+        <!-- <mat-error *ngIf="email?.errors?.['required']">
+          error in email 
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">
+          Please enter  votre   email address
+        </mat-error> -->
+        <i class="typcn typcn-eye" id="eye"></i>
+        <input matInput type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off" required minlength="8" formControlName="password">
+       
+        <!-- <mat-error *ngIf="password?.errors?.['required']">
+          Password is required
+        </mat-error> -->
+        <input matInput type="password" name="confirmPassword" placeholder=" connfig Passsword" id="pwd" autocomplete="off" required minlength="8" formControlName="confirmPassword">
+        <!-- <mat-error *ngIf="confirmPassword?.errors?.['required']">
+          password ne pas la meme
+        </mat-error>
+        <mat-error *ngIf="signUpForm.errors?.['passwordsDontMatch']">
+          password ne pas la meme
+      </mat-error> -->
+      <input  matInput type="text" name="code" placeholder=" code entrepprise" autocomplete="off"  formControlName="code">
+
+      <i class="typcn typcn-eye" id="eye"></i>
+     
+        <button type="submit"  class="btn1">Sin Up</button>
+      </form>
+    
+    
+</div>

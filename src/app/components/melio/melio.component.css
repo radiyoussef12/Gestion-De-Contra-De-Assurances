@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600;700&family=Poppins:wght@300;400;500;700&family=Sono&family=Tilt+Neon&display=swap'); 
+
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700 !important ;
+    color:#092032;
+}
+
+
+img {
+    width: 100%;
+}
+
+.section {
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+   ;
+}
+.bg-cover {
+    background-position: center !important;
+    background-size: cover !important;
+}
+
+.logo {
+    width: 150px;
+    height: 60px;
+    margin-left: 0%;
+    float:left;
+    border-radius: 30%;  
+}
+
+.navbar {
+    box-shadow: 0px 6px 30px rgba(0,0,0,0.08);
+}
+.navbar .navbar-nav .nav-link:hover,
+.navbar:active{
+    color: #15284f; 
+}
+
+/* BTN */
+.btn {
+    padding: 9px 24px;
+
+}
+.btn-brand {
+    background-color: #25292e;
+    width: 130px;
+}
+
+
+/* SLIDER */
+.slide1 {
+    background:linear-gradient(rgba(58, 59, 59, 0.4),rgba(58, 59, 59, 0.4));
+}
+.slide2 {
+    background:linear-gradient(rgba(58, 59, 59, 0.4),rgba(58, 59, 59, 0.4));
+    ;
+}
+/* Owl CAROSEL */
+.owl-prev,
+.owl-next {
+    position: absolute;
+    top: 50%;
+    width: 60px !important;
+    height: 60px!important;
+    display: grid;
+    place-items: center;
+    background-color: rgba(255, 255, 255, 0.2) !important;
+    margin-top: -30px !important ;
+    color: #fff;
+    font-weight: 700 !important;
+    font-size: 12 px !important;
+    border-radius: 100px !important;
+}
+
+.owl-prev {
+    left:0;
+}
+
+.owl-next {
+    right:0;
+}
+
+.owl-prev:hover,
+.owl-next:hover {
+    background-color: #6c6e71 !important;
+}
+
+/* INFOBOX */
+.info-box {
+    display: flex;
+    align-items: center;
+}
+.info-box img {
+    width: 60px;
+    margin-right: 24px;
+
+}
+.img {
+    border-radius: 60% !important;
+    width:100%;
+}
+/* Footer */
+.footer-top {
+    padding-top: 50px;
+    padding-bottom: 90px;
+    background-color:#a1a2a3;
+}
+
+.footer-top a {
+    color: aliceblue;
+
+}
+
+.footer-top a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    background-color: #6c6e71;
+}
+.icon {
+    width: 5%;
+}
+#img {
+
+    height: 240px;
+}
+.hero::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 1, 3, 0.116);
+    z-index: -1;
+}

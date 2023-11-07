@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "my-ap-5449f": {
+      "hosting": {
+        "pfe": [
+          "my-ap-5449f"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "my-ap-5449f"
+  }
+}

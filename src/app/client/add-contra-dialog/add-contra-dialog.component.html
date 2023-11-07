@@ -1,0 +1,232 @@
+<!-- 
+
+
+
+<div style="background-color: rgb(116, 8, 116);">
+
+ <h2 mat-dialog-tile style="text-align: center; "> {{ title }} </h2>
+
+
+<mat-dialog-content [formGroup]="form" class="div1" >
+
+    <mat-grid-list cols="2" class="nom" style="padding: 0%; margin: 0px;">
+
+      <mat-grid-tile >
+        <div >
+          <mat-form-field >
+            <mat-label>Voter Nom:</mat-label>
+            <input matInput
+                    placeholder="Entre votr nom"
+                    formControlName="nom"
+                  
+                    required  class="nom">
+            <mat-error *ngIf="">nessaire de entre votre  nom</mat-error>
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Votre Prenom : </mat-label>
+            <input matInput
+                    placeholder="Entre Votre prenom"
+                    formControlName="prenom"
+                    required>
+            <mat-error *ngIf="">Enter valid mobile number</mat-error>
+          </mat-form-field>
+          
+        
+        </div>
+    </mat-grid-tile>
+
+      <mat-grid-tile>
+
+    
+        <div>
+
+            <mat-form-field>
+                <mat-label>Branche</mat-label>
+                <mat-select disableRipple formControlName="Branche">
+                  <mat-option value="1">Vie</mat-option>
+                  <mat-option value="2">Grele</mat-option>
+                  <mat-option value="3">Trmplete</mat-option>
+                  <mat-option value="4">Incendie</mat-option>
+
+                </mat-select>
+              </mat-form-field>
+
+              <mat-form-field>
+
+
+                <mat-label>valeur de validite par mois</mat-label>
+                <mat-select disableRipple formControlName="validite">
+                  <mat-option value='3'>3 mois</mat-option>
+                  <mat-option value="6">6 mois</mat-option>
+                  <mat-option value="9">9 mois</mat-option>
+                  <mat-option value="12">12 mois/1 ans</mat-option>
+
+                </mat-select>
+              </mat-form-field>
+ 
+
+              
+         
+
+             
+        </div>
+        
+      </mat-grid-tile>
+
+    </mat-grid-list>
+
+</mat-dialog-content>
+
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close style="margin: 30px ;"(click)="cancelRegistration()">Cancel</button>
+  <button mat-raised-button color="primary" mat-dialog-close  style="margin: 5px;" (click)="registerContra()" >  submit</button>
+</div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+<div style=" background: #707272;">
+
+  <h2 mat-dialog-tile style="text-align: center; "> Client </h2>
+ 
+ 
+ <mat-dialog-content [formGroup]="form" class="div1" >
+ 
+     <mat-grid-list cols="2" class="nom" style="padding: 0%; margin: 0px;">
+ 
+       <mat-grid-tile >
+         <div >
+
+        
+
+           <mat-form-field >
+             <mat-label>name</mat-label>
+             <input matInput
+                     placeholder="Enter your name"
+                     formControlName="nom"
+                     
+                     required  class="nom">
+       
+           </mat-form-field>
+ 
+           <mat-form-field>
+             <mat-label>last name </mat-label>
+             <input matInput
+                     placeholder="Enter your  last name"
+                     formControlName="prenom"
+                     required>
+             <mat-error *ngIf="">Enter valid mobile number</mat-error>
+           </mat-form-field>
+
+        
+
+
+          
+
+           <mat-form-field >
+            <mat-label>Contract No :</mat-label>
+            <input matInput
+                   
+                    formControlName="idC"
+                    [readonly]="true"
+                    required  class="">
+          
+          </mat-form-field>
+
+           
+
+         </div>
+     </mat-grid-tile>
+ 
+       <mat-grid-tile>
+ 
+     
+         <div>
+ 
+           
+
+             
+                <mat-form-field>
+                  <mat-label>Branches</mat-label>
+                  <mat-select disableRipple formControlName="Branche">
+                    <mat-option value="1">Life</mat-option>
+                    <mat-option value="2">Hail</mat-option>
+                    <mat-option value="3">Storm</mat-option>
+                    <mat-option value="4">Fire</mat-option>
+    
+                  </mat-select>
+                </mat-form-field>
+              
+
+                  <mat-form-field>
+
+
+                <mat-label>Period</mat-label>
+                <mat-select disableRipple formControlName="validite">
+                  <mat-option value='3'>3 month</mat-option>
+                  <mat-option value="6">6 month</mat-option>
+                  <mat-option value="9">9 month</mat-option>
+                  <mat-option value="12">12 month/1 yares</mat-option>
+
+                </mat-select>
+              </mat-form-field>
+
+      
+    
+               
+
+              <mat-form-field>
+                <mat-label>Id Agent : </mat-label>
+                <input matInput
+                     
+                        formControlName="idA"
+                        required  [readonly]="true">
+                
+              </mat-form-field>
+ 
+            
+            
+              
+
+               
+          
+            
+
+
+            
+         </div>
+         
+       </mat-grid-tile>
+ 
+     </mat-grid-list>
+
+     <mat-form-field style="margin-left: 150px; margin-top: -190px;" class="example-form-field">
+      <mat-label>Agent </mat-label>
+      <input  matInput 
+              [readonly]="true"
+             
+              formControlName="Agent"
+              required>
+    </mat-form-field>
+
+  
+ </mat-dialog-content>
+ 
+ <div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close style="margin: 30px ;" (click)="cancelRegistration()">Cancel</button>
+   
+  <button mat-raised-button color="primary" mat-dialog-close  style="margin: 5px;" (click)="registerContra()" [disabled]="!form.get('nom')!.valid||!form.get('prenom')!.valid||!form.get('validite')!.valid||!form.get('Branche')!.valid" >  submit</button>
+ 
+ </div>
+ </div>
+ 

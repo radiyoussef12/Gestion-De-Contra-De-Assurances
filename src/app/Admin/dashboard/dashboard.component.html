@@ -1,0 +1,42 @@
+<div>
+
+    <app-widget-area ></app-widget-area>
+</div>
+<br>
+
+ <mat-divider></mat-divider>
+<br>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="10px" class="stats-cards">
+    <mat-card fxFlex="25">
+        <app-widget-card label="Life Inassurance" total="100k" percentage="50.1" ></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Hail Inassurance" total="10k" percentage="5"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Strom Inassurance" total="8k" percentage="40"></app-widget-card>
+    </mat-card>
+    <mat-card fxFlex="25">
+        <app-widget-card label="Fire Inassurance" total="6k" percentage="20"></app-widget-card>
+    </mat-card>
+
+
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div><h1 style="margin-left: 30px; text-align: center; color: brown;">
+   Our Project statistics 
+</h1></div>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+    <div fxFlex="50">
+        <app-widget-global [data]="bigChart" ></app-widget-global>
+        <!-- <app-widget-pie ></app-widget-pie> -->
+    </div>
+<div fxFlex="50">
+    <app-widget-pie [data]="pieChart" ></app-widget-pie>
+</div>
+</div>

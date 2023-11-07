@@ -1,0 +1,172 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background: url("src/assets/img/Rmm.png");
+/* background-repeat: no-repeat; */
+  padding: 0px;
+  margin:0px;
+ 
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.container{
+  /* background-color: #292626; */
+  margin: 0;
+  top: 10px;
+  left: 50%;
+  position: absolute;
+  text-align: center;
+  transform: translateX(-50%);
+  /* background-color: rgb(0, 0, 0);
+  border-radius: 89px;
+  border-top: 9px solid #ec1717;
+  border-bottom: 9px solid #ec1717; */
+  width: 400px;
+  height: 98%;
+  /* box-shadow: 0.4px 0.9px 200.8px 19.2px rgb(208, 210, 216); */
+}
+
+.box h4 {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #eeeeee; 
+  font-size: 20px;
+  margin-top:10px;;
+}
+
+.box h4 span {
+  color: #dfdeee;
+  font-weight: lighter;
+}
+
+.box h3 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 13px;
+  color: #e2e2e2;
+  letter-spacing: 1.5px;
+  margin-top: -1px;
+  margin-bottom: 16px;
+}
+
+.box input[type = "text"],.box input[type = "password"] ,.box input[type = "confirmPassword"]{
+  display: block;
+  margin: 10px auto;
+  background: #262e49;
+  border: 0;
+  border-radius: 5px;
+  padding: 14px 10px;
+  width: 320px;
+  outline: none;
+  color: #d6d6d6;
+      -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+  
+}
+::-webkit-input-placeholder {
+  color: #8590b3;
+}
+
+.box input[type = "text"]:focus,.box input[type = "password"]:focus {
+  border: 1px solid #79A6FE;
+  
+}
+
+a{
+  color: #5c7fda;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+
+
+.btn1 {
+  border:0;
+  background: #7c7c76;
+  color: #dfdeee;
+  border-radius: 100px;
+  width: 340px;
+  height: 39px;
+  font-size: 16px;
+  position: absolute;
+  top: 76%;
+  left: 8%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn1:hover {
+  background: #92713e;
+}
+
+.rmb {
+  position: absolute;
+  margin-left: -24%;
+  margin-top: 0px;
+  color: #dfdeee;
+  font-size: 13px;
+}
+
+.forgetpass {
+  position: relative;
+  float: right;
+  right: 28px;
+}
+
+.dnthave{
+    position: absolute;
+    top: 92%;
+    left: 24%;
+}
+
+[type=checkbox]:checked + span:before {/* <-- style its checked state */
+    font-family: FontAwesome;
+    font-size: 16px;
+    content: "\f00c";
+    position: absolute;
+    top: -4px;
+    color: #896cec;
+    left: -1px;
+    width: 13px;
+}
+
+.typcn {
+  position: absolute;
+  left: 339px;
+  top: 282px;
+  color: #3b476b;
+  font-size: 22px;
+  cursor: pointer;
+}      
+
+.typcn.active {
+  color: #7f60eb;
+}
+
+.error {
+  background: #ff3333;
+  text-align: center;
+  width: 337px;
+  height: 20px;
+  padding: 2px;
+  border: 0;
+  border-radius: 5px;
+  margin: 10px auto 10px;
+  position: absolute;
+  top: 31%;
+  left: 7.2%;
+  color: white;
+  display: none;
+}

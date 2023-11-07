@@ -1,0 +1,77 @@
+<!-- 
+<div style="background-color: #707272; width: 450px; ">
+
+    <h2 mat-dialog-tile style="text-align: center; "> Agent </h2>
+   
+   
+   <mat-dialog-content [formGroup]="formAgent" class="div1" >
+   
+           <div  style=" display:inline-flex; width: 200px ;margin: 2px;">
+             <mat-form-field style="width: 700px; margin: 20px;" >
+               <mat-label>Voter Nom:</mat-label>
+               <input matInput
+                       placeholder="Entre votr nom"
+                       formControlName="nomA"
+                     
+                       required  class="nom">
+               <mat-error *ngIf="">nessaire de entre votre  nom</mat-error>
+             </mat-form-field>
+   
+             <mat-form-field style="width: 900px; margin: 20px;" >
+               <mat-label>Votre Prenom : </mat-label>
+               <input matInput
+                       placeholder="Entre Votre prenom"
+                       formControlName="prenomA"
+                       required
+                       style="width: 900px; margin: 2px;"
+                       >
+               <mat-error *ngIf="">Enter valid mobile number</mat-error>
+             </mat-form-field>
+             
+           
+           </div>
+   
+   
+   </mat-dialog-content>
+   
+   <div mat-dialog-actions>
+     <button mat-raised-button mat-dialog-close style="margin: 30px ;" (click)="cancelRegistrationAgent()">Cancel</button>
+
+     <button mat-raised-button color="primary" mat-dialog-close  style="margin: 5px;" (click)="registerContraAgent()" >  submit</button>
+   
+   </div>
+   </div>
+    -->
+
+
+
+
+
+
+
+    
+<div class="body" style="width: 400px;">
+
+  <div >
+    <div class="heading">
+      <h1>new Agent</h1>
+    </div>
+   <div class="form">
+      <form [formGroup]="formAgent">
+        <span>
+          <i class="fa fa-user"></i>
+          <input type="text" placeholder="First name" name=""formControlName="nomA">
+        </span><br>
+        <span>
+                 <i class="fa-solid fa-lock"></i>
+          <input type="text" placeholder="Last name" name=""  formControlName="prenomA">
+        </span><br>
+        <button mat-raised-button mat-dialog-close style="margin: 10px ; width: 90px;" (click)="cancelRegistrationAgent()" >Cancel</button>
+
+        <button mat-raised-button color="primary" mat-dialog-close  style="margin: 5px;width: 90px;" (click)="registerContraAgent()"  [disabled]="!formAgent.get('nomA')!.valid||!formAgent.get('prenomA')!.valid" >  submit</button>
+      
+     </form>
+   </div>
+    </div>
+
+  </div>

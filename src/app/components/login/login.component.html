@@ -1,0 +1,62 @@
+<!-- <div class="form-container mat-elevation-z5">
+    <h1>Login</h1>
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+    
+      <mat-form-field>
+        <input matInput placeholder="Email address" formControlName="email" />
+        <mat-error *ngIf="email?.errors?.['required']">
+          Email address is required
+        </mat-error>
+        <mat-error *ngIf="email?.errors?.['email']">
+          Please enter a valid email address
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput type="password" placeholder="Password" formControlName="password" />
+        <mat-error *ngIf="password?.errors?.['required']">
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      <div class="center margin-top">
+          <button type="submit" mat-raised-button color="primary">Login</button>
+      </div>
+      <span class="center margin-top">New to our platform? <a class="sign-up-link" routerLink="/sign-up">Sign up!</a></span>
+    </form>
+  </div> -->
+
+
+
+
+
+  <body id="particles-js" ></body>
+<div class="animated bounceInDown" >
+  <div class="container">
+    <span class="error animated tada" id="msg"></span>
+    <form name="form1" class="box" [formGroup]="loginForm" (ngSubmit)="submit()">
+      <h4>Login   <span>Client</span></h4>
+      <h5 style="margin-top: 20px;">Sign in to your account.</h5>
+        <input  matInput type="text" name="email" placeholder="Email" autocomplete="off" formControlName="email" required email style="margin: 20px; padding-top: 20px;">
+        <mat-error *ngIf="email?.errors?.['email']">
+          Please enter a valid email address
+        </mat-error>
+        <i class="typcn typcn-eye" id="eye"></i>
+        <input matInput type="password" name="password" placeholder="Passsword" id="pwd" autocomplete="off"formControlName="password" required minlength="8" style="margin: 20px;padding-top: 20px;">
+        <mat-error *ngIf="password?.errors?.['required']">
+          Password is required
+        </mat-error>
+     
+        <!-- <a href="#" class="forgetpass">Forget Password?</a> -->
+        <button mat-button color="primary" [disabled]="!loginForm.get('email')!.valid"
+        (click)="recoverPassword()"
+        test-id="recover-password-button">
+        Recover password
+    </button>
+        <button type="submit"  class="btn1">Login</button>
+      </form>
+        <a routerLinkActive="list-item-active" routerLink="/admin/branch" class="dnthave">Don’t have an account? Sign up</a>
+  </div> 
+       <div class="footer">
+      <!-- <span>Made with <i class="fa fa-heart pulse"></i> <a href="https://www.google.de/maps/place/Augsburger+Puppenkiste/@48.360357,10.903245,17z/data=!3m1!4b1!4m2!3m1!1s0x479e98006610a511:0x73ac6b9f80c4048f"><a href="https://codepen.io/lordgamer2354">By Anees Khan</a></span> -->
+    </div>
+</div>
+  
